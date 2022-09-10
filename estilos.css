@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   
+}
+
+.fondo{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background:linear-gradient(135deg, #00b7d4, #177ba3, #265b8d, #104672, #cf8c4a,#e2a465, #ebb37b, #e8c39e);
+    background-size: 500%;
+    animation: animado 10s infinite;
+}
+
+.fondo-2{
+    background: url(dos.jpeg);
+    background-size: cover;
+}
+
+@keyframes animado {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.container{
+    top: 80px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 75px;
+    border: 2px solid black;
+    margin: 20px;
+    border-radius: 15px;
+    transition: .5s;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+}
+
+.box:hover{
+    width: 180px;
+    height: 90px;
+}
+
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: -250%;
+    transition: 1s;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.dos{
+    margin-top: 0;
+}
+
+img {
+    width: 100%;
+    height: 240px;
+   box-shadow: 10px;
+}
+
+.figura{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    background: rgb(196, 12, 12);
+    left: 30px;
+    top: -100px;
+}
+
+.movimiento{
+    animation-iteration-count: infinite;
+    animation-timing-function: initial;
+    animation-duration: 15s;
+    animation-name: desplazamiento;
+}
+
+.figura:before,
+.figura:after {
+    content: "";
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: rgb(196, 12, 12);
+    position: absolute;
+}
+
+.figura:before {
+    top: 0;
+    left: -25px;
+}
+
+.figura:after {
+    top: -25px;
+}
+
+@keyframes desplazamiento {
+    0%{
+        left: 30px;
+        top: -100px;
+    }
+    5%{
+        left: 110px;
+    }
+    10%{
+        top: 80vh;
+        left: 70px;
+    }
+    15%{
+        top: 70vh;
+    }
+    20%{
+        left: 80vw;
+        top: 80vh;
+    }
+    30%{
+        left: 70vw;
+        top: 20px;
+    }
+    50%{
+        top: -100px;
+    }
+    60%{
+        top: 50px;
+        left: 50vw;
+    }
+    70%{
+        top: 70vh;
+        left: 45px;
+    }
+    75%{
+        left: 50vw;
+    }
+    80%{
+        top: 50vh;
+        left: 80vw;
+    }
+    90%{
+        top: 80vh;
+        left: 50vw;
+    }
+    100%{
+        left: 30px;
+        top: -100px;
+    }
+}
+
+.texto {
+    position: absolute;
+    background-color: #fff9df ;
+    width: 100%;
+    height: 300px;
+    bottom: 0;
+    left: -200%;
+    text-align: center;
+    transition: 2s;
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+    padding: 7px;
+    
+}
+
+.mensaje {
+    bottom: 0;
+    left: 0;
+}
